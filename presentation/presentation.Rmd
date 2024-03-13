@@ -457,3 +457,30 @@ class: center, middle
 本幻灯片由 R 包 [**xaringan**](https://github.com/yihui/xaringan) 生成；
 
 查克拉来自于 [remark.js](https://remarkjs.com)、[**knitr**](https://yihui.org/knitr)、以及 [R Markdown](https://rmarkdown.rstudio.com)。
+
+---
+
+# Expected Outcome
+
+Urban waterlogging monitoring and early warning  system platform
+
+.center[![](https://ars.els-cdn.com/content/image/1-s2.0-S2212420922002618-gr10_lrg.jpg)]
+
+
+---
+
+# Summary
+
+This project extracts and evaluates key information on the flooding situation in Beijing by integrating multi-source remote sensing data.
+
+Benefits of the project:
+- Provide accurate disaster information and technical support. 
+
+- Provide a scientific basis for emergency response following floods.
+
+- Raise the disaster awareness and coping capacity of urban residents.
+
+- Promote sustainable urban development.
+
+
+
