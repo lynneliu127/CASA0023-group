@@ -180,7 +180,6 @@ class: inverse, middle, center
 
 # Case Study
 
-
 ### London, UK
 Widespread flooding and informal settlement
 50,000 affected, + $780,000 in recovery and emergency response.
@@ -194,16 +193,11 @@ Flood protective measures could unlock up to $900 million of real estate investm
 ]
 
 .pull-right[
-```{r echo=FALSE, out.width='100%', fig.align='right'}
+```{r echo=FALSE, out.width='150%', fig.align='right'}
 knitr::include_graphics("img/uk-flood.jpg")
 ```
 Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-working-day-and-night-to-reduce-flood-impact--2)
 ]
-
----
-```
-
-欲知所有可能的选项，参见 R 帮助文档 `?xaringan::moon_reader`。
 
 ---
 
