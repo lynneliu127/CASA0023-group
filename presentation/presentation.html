@@ -29,7 +29,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1b5a83a5cf945f3abe569c77cbd99b1","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d709ab04f68442e2ae742fee790684b8","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -170,20 +170,26 @@ class: inverse, middle, center
 
 ---
 
-# xaringan
+# Case Study
 
-**xaringan** 包提供了一个 R Markdown 输出格式 `xaringan::moon_reader`，你可以在 R Markdown 文档的元数据中使用它，例：
 
-```yaml
----
-title: "啧啧啧，厉害啊"
-author: "张三"
-date: "2016年12月12日"
-output:
-  xaringan::moon_reader
-    nature:
-      autoplay: 30000
-      highlightStyle: github
+### London, UK
+Widespread flooding and informal settlement
+50,000 affected, + $780,000 in recovery and emergency response.
+Community risk mapping project led by the World Bank and other Tanzanian NGOs   
+
+
+.pull-left[
+* Identified substantial geospatial information including landuse, infrastructure and exposure data
+* 3.5 million residents in over 228 communities mapped within 3 years.
+Flood protective measures could unlock up to $900 million of real estate investments including $200 million of new revenue to the city through the construction of up to 5,900 new housing units.
+]
+
+.pull-right[
+&lt;img src="img/uk-flood.jpg" width="100%" style="display: block; margin: auto 0 auto auto;" /&gt;
+Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-working-day-and-night-to-reduce-flood-impact--2)
+]
+
 ---
 ```
 
@@ -193,7 +199,7 @@ output:
 
 # Approach
 
-&lt;img src="img/plan.png" width="200%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/approach.png" width="200%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -202,7 +208,7 @@ output:
 数学公式用 LaTeX 语法写在一对美元符号中间，例如 &amp;#36;\alpha+\beta$ 会生成 `\(\alpha+\beta\)`。若要将公式单独显示为一个段落，可以用一对双重美元符号：
 
 ```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
 ```
 
 `$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
@@ -268,8 +274,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a8b2f2f795f88217a8e3" style="width:100%;height:432px;"></div>
-<script type="application/json" data-for="htmlwidget-a8b2f2f795f88217a8e3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3b0152940686d14c04cb" style="width:100%;height:432px;"></div>
+<script type="application/json" data-for="htmlwidget-3b0152940686d14c04cb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -281,8 +287,8 @@ DT::datatable(
 )
 ```
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-03a27133f6457bae6992" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-03a27133f6457bae6992">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c40416fee54c5e90e91b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c40416fee54c5e90e91b">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 

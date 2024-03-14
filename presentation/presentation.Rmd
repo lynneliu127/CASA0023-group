@@ -178,20 +178,28 @@ class: inverse, middle, center
 
 ---
 
-# xaringan
+# Case Study
 
-**xaringan** 包提供了一个 R Markdown 输出格式 `xaringan::moon_reader`，你可以在 R Markdown 文档的元数据中使用它，例：
 
-```yaml
----
-title: "啧啧啧，厉害啊"
-author: "张三"
-date: "2016年12月12日"
-output:
-  xaringan::moon_reader
-    nature:
-      autoplay: 30000
-      highlightStyle: github
+### London, UK
+Widespread flooding and informal settlement
+50,000 affected, + $780,000 in recovery and emergency response.
+Community risk mapping project led by the World Bank and other Tanzanian NGOs   
+
+
+.pull-left[
+* Identified substantial geospatial information including landuse, infrastructure and exposure data
+* 3.5 million residents in over 228 communities mapped within 3 years.
+Flood protective measures could unlock up to $900 million of real estate investments including $200 million of new revenue to the city through the construction of up to 5,900 new housing units.
+]
+
+.pull-right[
+```{r echo=FALSE, out.width='100%', fig.align='right'}
+knitr::include_graphics("img/uk-flood.jpg")
+```
+Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-working-day-and-night-to-reduce-flood-impact--2)
+]
+
 ---
 ```
 
@@ -202,7 +210,7 @@ output:
 # Approach
 
 ```{r echo=FALSE, out.width='200%', fig.align='center'}
-knitr::include_graphics("img/plan.png")
+knitr::include_graphics("img/approach.png")
 ```
 
 ---
