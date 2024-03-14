@@ -1,28 +1,91 @@
 ---
-title: "幻灯忍者"
-subtitle: "写轮眼"
-author: "谢益辉"
-institute: "RStudio, PBC"
-date: "2016/12/12"
+title: "Beijing Floods & Vulnerability assessment"
+subtitle: "CASA0023<br/>Group Project"
+author: "Yuqing,Qianyu,Xiaoyi,Xingru,Yihan"
+institute: "UCL CASA"
+date: "2024/03"
 output:
   xaringan::moon_reader:
-    css: [default, zh-CN.css]
+    css: [xaringan-themer.css, custom.css]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+    seal: false
 ---
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-```{r setup, include=FALSE}
+```{r setup, include=FALSE,echo=FALSE}
 options(htmltools.dir.version = FALSE)
+library(dplyr)
+library(readr)
+library(readxl)
+library(knitr)
 ```
 
-???
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(primary_color = "#0D5E74", 
+                 # secondary_color = "#2881C6",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+)
+```
 
-图片来源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+```{r xaringan-all, echo=FALSE, warning=FALSE}
+library(countdown)
+library(xaringan)
+library(xaringanExtra)
+hook_source <- knitr::knit_hooks$get('source')
+knitr::knit_hooks$set(source = function(x, options) {
+  x <- stringr::str_replace(x, "^[[:blank:]]?([^*].+?)[[:blank:]]*#<<[[:blank:]]*$", "*\\1")
+  hook_source(x, options)
+})
+xaringanExtra::use_broadcast()
+xaringanExtra::use_freezeframe()
+xaringanExtra::use_scribble()
+#xaringanExtra::use_slide_tone()
+xaringanExtra::use_search(show_icon = TRUE, auto_search	=FALSE)
+xaringanExtra::use_freezeframe()
+xaringanExtra::use_clipboard()
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         
+  mute_unhighlighted_code = TRUE  
+)
+```
+
+```{r setupbibliography, include=FALSE}
+# Code supplied by Andy (see wk2 slides 25-28)
+library(RefManageR)
+library(knitcitations)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib <- ReadBib("references.bib",
+                 # "./Bib.bib", 
+                 check = FALSE)
+```
+
+class: center, title-slide, middle
+
+background-image: url("img/rain1.jpg")
+background-size: cover
+background-position: center
+
+# Beijing Floods & Vulnerability assessment
+## CASA0023<br/>Group Project
+### Yuqing Liu et al.
+
+### `r format(Sys.time(), "%d/%m/%Y")`
 
 ---
 class: center, middle
@@ -136,43 +199,15 @@ output:
 
 ---
 
-# remark.js 与 xaringan 的区别
+# Approach
 
-remark.js （左）与 **xaringan** （右）：
-
-.pull-left[
-1. 需要一个 HTML 容器文件；
-
-1. 只能用 Markdown；
-
-1. 若想自动播放幻灯片需要写 JavaScript；
-
-1. 需手工配置 MathJax；
-
-1. 用 `*` 高亮一行代码；
-
-1. 编辑 Markdown 之后需要刷新浏览器看结果；
-]
-
-.pull-right[
-1. 用 R Markdown 文档生成幻灯片；
-
-1. Markdown 里可以嵌入 R 代码；
-
-1. 可用 `autoplay` 选项自动播放；
-
-1. MathJax 无需特别配置；<sup>*</sup>
-
-1. 用 `{{}}` 高亮一行代码;
-
-1. 用 RStudio 插件“Infinite Moon Reader”自动预览幻灯片；
-]
-
-.footnote[[*] 下一页有数学公式例子。]
+```{r echo=FALSE, out.width='200%', fig.align='center'}
+knitr::include_graphics("img/plan.png")
+```
 
 ---
 
-# 数学公式
+# Methodology
 
 数学公式用 LaTeX 语法写在一对美元符号中间，例如 &#36;\alpha+\beta$ 会生成 $\alpha+\beta$。若要将公式单独显示为一个段落，可以用一对双重美元符号：
 
