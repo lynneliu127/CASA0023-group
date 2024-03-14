@@ -182,8 +182,7 @@ class: inverse, middle, center
 
 ### London, UK
 Widespread flooding and informal settlement
-50,000 affected, + $780,000 in recovery and emergency response.
-Community risk mapping project led by the World Bank and other Tanzanian NGOs   
+50,000 affected,    
 
 
 .pull-left[
@@ -205,6 +204,13 @@ Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-wor
 
 ```{r echo=FALSE, out.width='200%', fig.align='center'}
 knitr::include_graphics("img/approach.png")
+```
+
+---
+# Approach
+
+```{r echo=FALSE, out.width='140%', fig.align='center'}
+knitr::include_graphics("img/approach1.png")
 ```
 
 ---
