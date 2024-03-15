@@ -172,9 +172,84 @@ class: center, bottom, inverse
 ### 唔，remark.js，朕很满意！
 
 ---
+
+### UN Sustainable Development Goals
+
+<div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: center;">
+  <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
+    <img src="./img/E_WEB_06.png" style="width: 100%; max-height: 200px;" alt=" "/>
+    <figcaption style="font-size: 18px;">
+      <strong>Wastewater treatment, water efficiency enhancement and securing fresh water supply</strong>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
+        <li style="font-size: 18px;">% domestic and industrial wastewater flows safely treated</li>
+        <li style="font-size: 18px;">% water bodies with good environmental quality</li>
+        <li style="font-size: 18px;">% freshwater withdrawals to available freshwater resources</li>
+      </ul>
+    </figcaption>
+  </figure>
+  
+  <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
+    <img src="./img/E_WEB_11.png" style="width: 100%; max-height: 200px;" alt=" "/>
+    <figcaption style="font-size: 18px;">
+      <strong>Sustainable urbanization, disaster reduction</strong>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
+        <li style="font-size: 18px;">% civil society participation in urban planning and management</li>
+        <li style="font-size: 18px;">Population, economic and infrastructure losses associated with disasters</li>
+      </ul>
+    </figcaption>
+  </figure>
+  
+  <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
+    <img src="./img/E_WEB_13.png" style="width: 100%; max-height: 200px;" alt=" "/>
+    <figcaption style="font-size: 18px;">
+      <strong>Climate disaster resilience and planning</strong>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
+        <li style="font-size: 18px;">Sendai Framework for Disaster Risk Reduction</li>
+        <li style="font-size: 18px;">Development of local strategies based on national strategies</li>
+        <li style="font-size: 18px;">Reporting to the United Nations Framework Convention on Climate Change on information, plans and contributions</li>
+      </ul>
+    </figcaption>
+  </figure>
+</div>
+
+---
+
+## Beijing Urban Resilience Strategy—Building spongy, resilient cities
+
+- **Upgrading urban emergency disaster prevention technology**
+
+Research on climate change and underground structures, risk assessment, and optimization of spatial patterns for urban disaster prevention and evacuation and rescue systems.
+- **Improvement of emergency rescue capability**
+
+Enhancing emergency rescue and material protection capacity, upgrading emergency medical treatment capacity, and strengthening transportation and communication protection capacity, etc.
+- **Programs for cross-sectoral coordination and collaboration in disaster and disease management and development of contingency plans**
+
+
+<small>Source: Proposals for China's Vision for 2035 (2023)<small>
+---
 class: inverse, middle, center
 
-# xaringan 包的使用
+# It was not clear what information was used to guide responses.
+---
+
+## Follow Sendai Framework for Disaster Risk Reduction 2015-2030
+
+**Address the recommendations of Priority**
+
+- **Understanding disaster risk<br>**
+  Monitoring of floods by satellite: Remote sensing technology, unmanned aerial vehicle (UAV) monitoring, etc., and dissemination of disaster risk information through networks
+
+- **Strengthening disaster risk governance to manage disaster risk<br>**
+  Across all sectors with defining roles and responsibilities
+  
+- **Investing in Disaster Risk Reduction for resilience<br>**
+  Rational allocation of resources
+
+- **Enhancing disaster preparedness for effective response and to "Build Back Better" in recovery, rehabilitation and reconstruction**
+
+
+<small>Source: United Nations Office for Disaster Risk Reduction (2019)<small>
+
 
 ---
 
