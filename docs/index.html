@@ -29,7 +29,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"cc919161792c4fd186b7b12f378aef28","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b71ef3fc6b844b0694e9e85904078eb0","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -72,7 +72,7 @@ background-image: url("img/rain1.jpg")
 background-size: cover
 background-position: center
 
-# Beijing Floods &amp; Vulnerability assessment
+# Beijing Floods &amp; Resilience assessment
 ## CASA0023&lt;br/&gt;Group Project
 ### Yuqing Liu et al.
 
@@ -157,11 +157,8 @@ class: center, bottom, inverse
 .footnote[[*] 它和 Pandoc Markdown 语法不同，不过对做幻灯片而言，简单的语法可能也足够了。]
 
 ---
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-background-size: cover
-class: center, bottom, inverse
+## u
 
-### 唔，remark.js，朕很满意！
 
 ---
 
@@ -246,20 +243,20 @@ class: inverse, middle, center
 ---
 
 # Case Study
-
 ### London, UK
-Widespread flooding and informal settlement
-50,000 affected,    
+&lt;div class="justify-text"&gt;
 
+London's flood risks are varied and include surface water, river, and tidal flooding. In the 2°C range, without flood management, Expected Annual Damages (EAD) would rise to £2.7-3bn from £2bn today. At 4°C future risk would rise to £3.5-3.9bn. 
+
+&lt;/div&gt;
 
 .pull-left[
-* Identified substantial geospatial information including landuse, infrastructure and exposure data
-* 3.5 million residents in over 228 communities mapped within 3 years.
-Flood protective measures could unlock up to $900 million of real estate investments including $200 million of new revenue to the city through the construction of up to 5,900 new housing units.
+* Under the Climate Change Act 2008, the UK Government publishes a Climate Change Risk Assessment (CCRA) every five years. 
+* A £15 million government funded Natural Flood Management (NFM) programme implemented between 2017 and 2021 to explore effective natural flood management techniques.
 ]
 
 .pull-right[
-&lt;img src="img/uk-flood.jpg" width="150%" style="display: block; margin: auto 0 auto auto;" /&gt;
+&lt;img src="img/uk-flood.jpg" width="100%" style="display: block; margin: auto 0 auto auto;" /&gt;
 Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-working-day-and-night-to-reduce-flood-impact--2)
 ]
 
@@ -284,38 +281,31 @@ Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-wor
 
 # Methodology
 
-'Ensemble-based' Machine Learning approach
+'Hyperparameter optimization' Machine Learning approach
 
 --
 
-1. Using database of historic flood data, split into **training (70%) and testing (30%)** set  
+1. Using database of exposure risk and capacity data, split into **Training dataset (70%) and Testing dataset (30%)** set
 
-1. Build a map (raster) of each hazard input parameter  
+2. Optimisation of different machine learning models with **hyperparameter optimization** methods: Support Vector Machines (SVM), XGBoost, RF (Random Forest), MLP (Multi-Layer Perceptron), GBDT (Gradient Boosted Decision Tree), CNN (Convolutional Neural Network) 
 
-1. Estimate flood **probability indices** (Frequency Ratio Approach)  
+3. Training, testing, and validating based on recorded **inundation hot-spots**
 
-1. Apply a **Support Vector Machine (SVM)** model, which will **classify** the input pixels   
+4. Creation of a **flood resilience map**
 
-1. Build a map (raster) of each vulnerability input parameter, classified on a quantile scale
+5. **Validate** the model using testing set of data
 
-1. **Combine** the hazard and vulnerability maps together to produce a bivariate risk map
 
-1. **Validate** the model using testing set of data
+Based off approaches developed by [链接文本](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[链接文本](https://www.mdpi.com/2072-4292/13/10/1864)
 
-Based off approaches developed by , , .
+
+, , .
 
 ???
 Presenter Notes
 
 Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
 
-Methodology: ‘Ensemble-based’ machine learning using SVM (Support Vector Machine)
-Each parameter rendered/built as a raster layer
-Frequency Ratio (FR) approach can be used to estimate flood probability indices, using the hazard parameters (the inputs are each classified using quantile breaks and an FR value assigned to each class). This will output which classes of which parameters (e.g. which values of elevation) are at the highest probability of flood. 
-Apply an SVM model; essentially a statistical theory to minimise operational risk standard, and performs a binary classification on the input pixels. 
-Repeat the process for vulnerability parameters, by classifying the raster cells on a scale (e.g. 0 to 5) of vulnerability depending on the parameter value. 
-The Hazard and Vulnerability models can then be multiplied together, and a weighted overlay applied.
-A training set taken from historic flood events can be used to validate the built model. 
 
 
 ---
@@ -342,8 +332,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d8e685bc9cefe3f5065f" style="width:100%;height:432px;"></div>
-<script type="application/json" data-for="htmlwidget-d8e685bc9cefe3f5065f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6abb8d69e0729f99d234" style="width:100%;height:432px;"></div>
+<script type="application/json" data-for="htmlwidget-6abb8d69e0729f99d234">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -355,8 +345,8 @@ DT::datatable(
 )
 ```
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8a7ac69163adcf221feb" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8a7ac69163adcf221feb">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5adae4faec7b93f54924" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5adae4faec7b93f54924">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -595,8 +585,33 @@ Urban waterlogging monitoring and early warning  system platform
 
 .center[![](https://ars.els-cdn.com/content/image/1-s2.0-S2212420922002618-gr10_lrg.jpg)]
 
+---
+
+# Risks and Limitations
+
+.pull-left[
+**Risks**
+
+-  Additional high expenses
+-  Technical errors or deficiencies
+-  Adverse effects from the surrounding environment
+-  Uncertainty due to extreme weather events
+-  Policy and legal complexity
+-  Management and coordination
+
+]
+
+.pull-right[
+**Mitigation**
+-  Setting aside funds
+-  Implement regular project inspections and maintenance
+-  Consider ecosystem protection in project design
+-  Strengthen cross-sectoral and inter-regional coordination and cooperation
+-  Develop detailed contingency plans
+]
 
 ---
+
 
 # Summary
 

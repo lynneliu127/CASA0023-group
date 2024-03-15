@@ -81,7 +81,7 @@ background-image: url("img/rain1.jpg")
 background-size: cover
 background-position: center
 
-# Beijing Floods & Vulnerability assessment
+# Beijing Floods & Resilience assessment
 ## CASA0023<br/>Group Project
 ### Yuqing Liu et al.
 
@@ -165,11 +165,8 @@ class: center, bottom, inverse
 .footnote[[*] 它和 Pandoc Markdown 语法不同，不过对做幻灯片而言，简单的语法可能也足够了。]
 
 ---
-background-image: url(`r xaringan:::karl`)
-background-size: cover
-class: center, bottom, inverse
+## u
 
-### 唔，remark.js，朕很满意！
 
 ---
 
@@ -254,20 +251,20 @@ class: inverse, middle, center
 ---
 
 # Case Study
-
 ### London, UK
-Widespread flooding and informal settlement
-50,000 affected,    
+<div class="justify-text">
 
+London's flood risks are varied and include surface water, river, and tidal flooding. In the 2°C range, without flood management, Expected Annual Damages (EAD) would rise to £2.7-3bn from £2bn today. At 4°C future risk would rise to £3.5-3.9bn. 
+
+</div>
 
 .pull-left[
-* Identified substantial geospatial information including landuse, infrastructure and exposure data
-* 3.5 million residents in over 228 communities mapped within 3 years.
-Flood protective measures could unlock up to $900 million of real estate investments including $200 million of new revenue to the city through the construction of up to 5,900 new housing units.
+* Under the Climate Change Act 2008, the UK Government publishes a Climate Change Risk Assessment (CCRA) every five years. 
+* A £15 million government funded Natural Flood Management (NFM) programme implemented between 2017 and 2021 to explore effective natural flood management techniques.
 ]
 
 .pull-right[
-```{r echo=FALSE, out.width='150%', fig.align='right'}
+```{r echo=FALSE, out.width='100%', fig.align='right'}
 knitr::include_graphics("img/uk-flood.jpg")
 ```
 Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-working-day-and-night-to-reduce-flood-impact--2)
@@ -300,38 +297,31 @@ knitr::include_graphics("img/approach2.png")
 
 # Methodology
 
-'Ensemble-based' Machine Learning approach
+'Hyperparameter optimization' Machine Learning approach
 
 --
 
-1. Using database of historic flood data, split into **training (70%) and testing (30%)** set  
+1. Using database of exposure risk and capacity data, split into **Training dataset (70%) and Testing dataset (30%)** set
 
-1. Build a map (raster) of each hazard input parameter  
+2. Optimisation of different machine learning models with **hyperparameter optimization** methods: Support Vector Machines (SVM), XGBoost, RF (Random Forest), MLP (Multi-Layer Perceptron), GBDT (Gradient Boosted Decision Tree), CNN (Convolutional Neural Network) 
 
-1. Estimate flood **probability indices** (Frequency Ratio Approach)  
+3. Training, testing, and validating based on recorded **inundation hot-spots**
 
-1. Apply a **Support Vector Machine (SVM)** model, which will **classify** the input pixels   
+4. Creation of a **flood resilience map**
 
-1. Build a map (raster) of each vulnerability input parameter, classified on a quantile scale
+5. **Validate** the model using testing set of data
 
-1. **Combine** the hazard and vulnerability maps together to produce a bivariate risk map
 
-1. **Validate** the model using testing set of data
+Based off approaches developed by [链接文本](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[链接文本](https://www.mdpi.com/2072-4292/13/10/1864)
 
-Based off approaches developed by `r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
+
+`r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
 
 ???
 Presenter Notes
 
 Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
 
-Methodology: ‘Ensemble-based’ machine learning using SVM (Support Vector Machine)
-Each parameter rendered/built as a raster layer
-Frequency Ratio (FR) approach can be used to estimate flood probability indices, using the hazard parameters (the inputs are each classified using quantile breaks and an FR value assigned to each class). This will output which classes of which parameters (e.g. which values of elevation) are at the highest probability of flood. 
-Apply an SVM model; essentially a statistical theory to minimise operational risk standard, and performs a binary classification on the input pixels. 
-Repeat the process for vulnerability parameters, by classifying the raster cells on a scale (e.g. 0 to 5) of vulnerability depending on the parameter value. 
-The Hazard and Vulnerability models can then be multiplied together, and a weighted overlay applied.
-A training set taken from historic flood events can be used to validate the built model. 
 
 
 ---
@@ -346,11 +336,29 @@ knitr::include_graphics('img/example.png')
 
 ---
 
-# HTML 控件
+class: middle, center
 
-我没有仔细测试 [HTML 控件](https://htmlwidgets.org)，祝你好运。下一页上有两个例子，一个地图，一个表格，目测貌似可用。
+# EO Data: Hazard
 
-目前也不支持 Shiny 模式（即 `runtime: shiny`）。还是别把你的幻灯片搞辣么复杂吧。
+```{r hazardtbl, echo=FALSE, message=FALSE}
+hazardtbl <- readxl::read_excel("img/eo-source-tables.xlsx", sheet = 1)
+knitr::kable(hazardtbl, format = 'html', col.names = c("Purpose", "EO data", "Spatial resolution", "Temporal resolution", "Cost", "Processing"))
+```
+
+Significant wave height (`r Citep(myBib, "shahidiTwoNewMethods2020", .opts = list(max.names=1, longnamesfirst = FALSE))`): 
+$$
+E=\frac{1}{8}pgH^2
+$$
+
+???
+
+Data pre-processing except Correction and resampling ?  What is our smallest research scale?
+
+Tidal range is the term describing the vertical change between the maximum high tide and the minimum low tide and is related to tidal flooding.(Tidal range is the difference in height between high tide and low tide.)
+Indonesia Agency for Meteorology, Climatology, and Geophysics (BMKG)
+NOAA Jason-3  is capable of measuring significant wave height (radar altimeter), sigma naught (sigma0), dry and wet troposphere and ionosphere, which can be used to calculate sea surface height, sea surface height anomalies, and total electron content.
+A high rate of Sea Level Rise was designated to correspond to high coastal vulnerability and vice versa. 
+Significant Wave Height is a replacement of wave energy, it is the average of the highest one-third (33%) of waves (measured from trough to crest) that occur in a given period. Satellite altimetry was the primary data for extracting the significant wave high.
 
 ---
 
@@ -600,8 +608,33 @@ Urban waterlogging monitoring and early warning  system platform
 
 .center[![](https://ars.els-cdn.com/content/image/1-s2.0-S2212420922002618-gr10_lrg.jpg)]
 
+---
+
+# Risks and Limitations
+
+.pull-left[
+**Risks**
+
+-  Additional high expenses
+-  Technical errors or deficiencies
+-  Adverse effects from the surrounding environment
+-  Uncertainty due to extreme weather events
+-  Policy and legal complexity
+-  Management and coordination
+
+]
+
+.pull-right[
+**Mitigation**
+-  Setting aside funds
+-  Implement regular project inspections and maintenance
+-  Consider ecosystem protection in project design
+-  Strengthen cross-sectoral and inter-regional coordination and cooperation
+-  Develop detailed contingency plans
+]
 
 ---
+
 
 # Summary
 
