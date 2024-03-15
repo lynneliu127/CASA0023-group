@@ -217,41 +217,57 @@ knitr::include_graphics("img/approach1.png")
 
 # Methodology
 
-数学公式用 LaTeX 语法写在一对美元符号中间，例如 &#36;\alpha+\beta$ 会生成 $\alpha+\beta$。若要将公式单独显示为一个段落，可以用一对双重美元符号：
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-
-局限性：
-
-1. 公式的源代码只能写在一行上，不能换行；双重美元符号内的公式允许换行，但条件是起始标记 `$$` 必须在一行的最开头（前面不能有任何字符，后面必须跟一个不是空格的字符），结束标记 `$$` 必须在一行的最末尾（前面必须是一个非空格的字符，后面不能有任何字符）；
-
-1. 起始美元符号后以及结束美元符号前不能有空格，否则不会被识别为公式；
-
----
-
-# R 代码
-
-```{r comment='#'}
-# 一个无聊的回归模型
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
+```{r echo=FALSE, out.width='140%', fig.align='center'}
+knitr::include_graphics("img/approach2.png")
 ```
 
 ---
 
-# R 图形
+# Methodology
 
-```{r cars, fig.height=3.5, dev='svg'}
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
+'Ensemble-based' Machine Learning approach
+
+--
+
+1. Using database of historic flood data, split into **training (70%) and testing (30%)** set  
+
+1. Build a map (raster) of each hazard input parameter  
+
+1. Estimate flood **probability indices** (Frequency Ratio Approach)  
+
+1. Apply a **Support Vector Machine (SVM)** model, which will **classify** the input pixels   
+
+1. Build a map (raster) of each vulnerability input parameter, classified on a quantile scale
+
+1. **Combine** the hazard and vulnerability maps together to produce a bivariate risk map
+
+1. **Validate** the model using testing set of data
+
+Based off approaches developed by `r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
+
+???
+Presenter Notes
+
+Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
+
+Methodology: ‘Ensemble-based’ machine learning using SVM (Support Vector Machine)
+Each parameter rendered/built as a raster layer
+Frequency Ratio (FR) approach can be used to estimate flood probability indices, using the hazard parameters (the inputs are each classified using quantile breaks and an FR value assigned to each class). This will output which classes of which parameters (e.g. which values of elevation) are at the highest probability of flood. 
+Apply an SVM model; essentially a statistical theory to minimise operational risk standard, and performs a binary classification on the input pixels. 
+Repeat the process for vulnerability parameters, by classifying the raster cells on a scale (e.g. 0 to 5) of vulnerability depending on the parameter value. 
+The Hazard and Vulnerability models can then be multiplied together, and a weighted overlay applied.
+A training set taken from historic flood events can be used to validate the built model. 
+
+
+---
+
+class: inverse, center, middle
+### Example output:Density  map
+
+```{r riskmap_img, echo=FALSE, out.width='70%', fig.align='center'}
+knitr::include_graphics('img/example.png')
 ```
+
 
 ---
 

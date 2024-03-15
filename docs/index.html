@@ -29,7 +29,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x210134b90e04fce8ad7768a91eb708a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0edfb62fc624e64b32dc4197bd556f9","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -76,7 +76,7 @@ background-position: center
 ## CASA0023&lt;br/&gt;Group Project
 ### Yuqing Liu et al.
 
-### 14/03/2024
+### 15/03/2024
 
 ---
 class: center, middle
@@ -203,58 +203,53 @@ Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-wor
 
 # Methodology
 
-数学公式用 LaTeX 语法写在一对美元符号中间，例如 &amp;#36;\alpha+\beta$ 会生成 `\(\alpha+\beta\)`。若要将公式单独显示为一个段落，可以用一对双重美元符号：
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
-
-局限性：
-
-1. 公式的源代码只能写在一行上，不能换行；双重美元符号内的公式允许换行，但条件是起始标记 `$$` 必须在一行的最开头（前面不能有任何字符，后面必须跟一个不是空格的字符），结束标记 `$$` 必须在一行的最末尾（前面必须是一个非空格的字符，后面不能有任何字符）；
-
-1. 起始美元符号后以及结束美元符号前不能有空格，否则不会被识别为公式；
+&lt;img src="img/approach2.png" width="140%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-# R 代码
+# Methodology
 
+'Ensemble-based' Machine Learning approach
 
-```r
-# 一个无聊的回归模型
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-```
+--
 
-```
-#               Estimate Std. Error   t value     Pr(&gt;|t|)
-# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
-# speed         3.932409  0.4155128  9.463990 1.489836e-12
-```
+1. Using database of historic flood data, split into **training (70%) and testing (30%)** set  
 
-```r
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
+1. Build a map (raster) of each hazard input parameter  
 
-```
-# [1] "地爆天星" "天照"
-```
+1. Estimate flood **probability indices** (Frequency Ratio Approach)  
+
+1. Apply a **Support Vector Machine (SVM)** model, which will **classify** the input pixels   
+
+1. Build a map (raster) of each vulnerability input parameter, classified on a quantile scale
+
+1. **Combine** the hazard and vulnerability maps together to produce a bivariate risk map
+
+1. **Validate** the model using testing set of data
+
+Based off approaches developed by , , .
+
+???
+Presenter Notes
+
+Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
+
+Methodology: ‘Ensemble-based’ machine learning using SVM (Support Vector Machine)
+Each parameter rendered/built as a raster layer
+Frequency Ratio (FR) approach can be used to estimate flood probability indices, using the hazard parameters (the inputs are each classified using quantile breaks and an FR value assigned to each class). This will output which classes of which parameters (e.g. which values of elevation) are at the highest probability of flood. 
+Apply an SVM model; essentially a statistical theory to minimise operational risk standard, and performs a binary classification on the input pixels. 
+Repeat the process for vulnerability parameters, by classifying the raster cells on a scale (e.g. 0 to 5) of vulnerability depending on the parameter value. 
+The Hazard and Vulnerability models can then be multiplied together, and a weighted overlay applied.
+A training set taken from historic flood events can be used to validate the built model. 
+
 
 ---
 
-# R 图形
+class: inverse, center, middle
+### Example output:Density  map
 
+&lt;img src="img/example.png" width="70%" style="display: block; margin: auto;" /&gt;
 
-```r
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
-```
-
-![](index_files/figure-html/cars-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -272,8 +267,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-86c3e74e4a42352d9561" style="width:100%;height:432px;"></div>
-<script type="application/json" data-for="htmlwidget-86c3e74e4a42352d9561">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b726e2bd96309e7403dc" style="width:100%;height:432px;"></div>
+<script type="application/json" data-for="htmlwidget-b726e2bd96309e7403dc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -285,8 +280,8 @@ DT::datatable(
 )
 ```
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3eff4beac3371e7223f2" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-3eff4beac3371e7223f2">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-859b242d85720e7e366d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-859b242d85720e7e366d">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
