@@ -491,6 +491,30 @@ knitr::include_graphics("table/data2.png")
 ```
 
 ---
+class: inverse, center, middle
+
+# 4. Plan Timetable & Budget
+
+
+---
+## 4.1 Project Timetable Plan
+
+The project involves enhancing urban resilience in Beijing, specifically focusing on flood risk assessment and early warning systems:
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("img/timetable.jpg")
+```
+
+1. Initial Preparation 
+2. Flood Risk Assessment Model Development
+3. Enhancing Urban Resilience
+4. Early Warning and Response Preparedness
+
+---
+## 4.2 Budget
+
+
+---
 
 # Risks and Limitations
 
