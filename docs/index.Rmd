@@ -95,7 +95,7 @@ background-position: center
 #### **1. Problem: Context & Background** — Qianyu Ren
 #### **2. Policy** — Xingru Liu
 #### **3. Case study, Approach & Methodology** - Yuqing Liu
-#### **4. Plan** - Xiaoyi Chen
+#### **4. Project Plan & Budget** - Xiaoyi Chen
 #### **5. Risks, Limitations & Summary** - Yihan Liu
 #### **6. References**
 
@@ -499,16 +499,30 @@ class: inverse, center, middle
 ---
 ## 4.1 Project Timetable Plan
 
+</br>
 The project involves enhancing urban resilience in Beijing, specifically focusing on flood risk assessment and early warning systems:
 
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("img/time_period.png")
+```
+
+
+</br>
+Based on the data from the 2023 Beijing-Tianjin-Hebei floods, Beijing experienced a severe rainstorm disaster from late July to early August. Therefore, our project will be completed by July 1st this year, allowing ample time for flood prevention measures
+
+---
+## 4.1 Project Timetable Plan
+
+</br>
+</br>
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("img/timetable.jpg")
 ```
 
-1. Initial Preparation 
-2. Flood Risk Assessment Model Development
-3. Enhancing Urban Resilience
-4. Early Warning and Response Preparedness
+<small>.center[Roles: A - Architects; E/S - Experts/Scholars; EC - Environment Consultant; GA - Geospatial Analysts;CR - Community Residents; DA - Data Analysts; E - Engineers; GD - Government Departments; PM - Project Managers]
+<small>
+
 
 ---
 ## 4.2 Budget
