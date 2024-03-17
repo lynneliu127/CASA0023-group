@@ -137,7 +137,14 @@ class: center, middle
 
 -  In summer, **typhoons move north from south**, the rapid and heavy **rainfall soaks the dry land**.
 
--  However, extended periods of **drought can reduce the soil's water absorption**.
+-  However, extended periods of **drought can reduce soil's water absorption**.
+
+.pull-middle[
+```{r echo=FALSE, out.width='50%', fig.align='center'}
+knitr::include_graphics("img/Beijing-average-rainfall.png")
+```
+]
+source:[Holiday-weather](https://www.holiday-weather.com/beijing/averages/)
 ---
 
 # 1.2 Landform
@@ -195,7 +202,7 @@ source:[Reuters](https://www.reuters.com/graphics/CHINA-WEATHER/RAINFALL/zdvxrrg
 
 - The trapped water has less surface area to accumulate, leading to higher water levels.
 
-- **Changes in landform may** cause rainfall from elsewhere to flow into the area, **increasing the volume of water**, limiting where floodwaters can disperse.
+- **Rich landform may** cause rainfall from elsewhere to flow into the area, **increasing the volume of water**, limiting where floodwater can disperse.
 
 .pull-left[
 
@@ -214,8 +221,6 @@ knitr::include_graphics("img/1.3.6.jpg")
 Beijing's landform exacerbates the impact
 ]
 
-                          
-<br/>
 source:[Reuters](https://www.reuters.com/graphics/CHINA-WEATHER/RAINFALL/zdvxrrgbqvx/)
 ---
 
@@ -505,6 +510,14 @@ Benefits of the project:
 - Raise the disaster awareness and coping capacity of urban residents.
 
 - Promote sustainable urban development.
+
+---
+
+# References
+
+- Ding, X., Liao, W., Lei, X., Wang, H., Yang, J., & Wang, H. (2022). Assessment of the impact of climate change on urban flooding: A case study of Beijing, China. Journal of Water and Climate Change, 13(10), 2692–3715. https://doi.org/10.2166/wcc.2022.224
+
+- Wang, Z., Li, Z., Wang, Y., Zheng, X., & Deng, X. (2024). Building green infrastructure for mitigating urban flood risk in Beijing, China. Urban Forestry & Urban Greening, 93, 128218-. https://doi.org/10.1016/j.ufug.2024.128218
 
 
 
