@@ -541,7 +541,6 @@ knitr::include_graphics("img/timetable.jpg")
 ---
 ## 4.2 Budget
 
-The allocation of £500,000 funds based on project timeline:
 
 
 | Activities                                                 | Budget Allocation | Percentage |
@@ -552,12 +551,11 @@ The allocation of £500,000 funds based on project timeline:
 | **Early Warning and Preparedness**</br>Warning system development</br>Coordination of emergency measures            | £50,000   | 10%        |
 
 
-
+The allocation of £500,000 funds based on project timeline.
 
 ---
 ## 4.2 Budget
 
-Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 30% = £150,000 available for personnel salaries. 
 
 
 | Roles | Total Salary | Quantity | Estimate work day | Day rate |
@@ -573,6 +571,7 @@ Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 
 | PM - Project Managers | £12,000 | 1 | 30 | £400 |
 
 
+Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 30% = £150,000 available for personnel salaries. 
 
 
 ---
