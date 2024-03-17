@@ -1,9 +1,9 @@
 ---
-title: "Beijing Floods & Vulnerability assessment"
+title: "Beijing Floods & Resilience Assessment"
 subtitle: "CASA0023<br/>Group Project"
-author: "Yuqing,Qianyu,Xiaoyi,Xingru,Yihan"
+author: "Yuqing Liu, Qianyu Ren, Xiaoyi Chen, Xingru Liu, Yihan Liu"
 institute: "UCL CASA"
-date: "2024/03"
+date: "17/03/2024"
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css, custom.css]
@@ -81,7 +81,7 @@ background-image: url("img/rain1.jpg")
 background-size: cover
 background-position: center
 
-# Beijing Floods & Resilience
+# Beijing Floods & Resilience Assessment
 ## CASA0023<br/>Group Project
 ### Group: InspiriaQueens
 
@@ -93,8 +93,8 @@ background-position: center
 
 <br/>
 #### **1. Problem: Context & Background** — Qianyu Ren
-#### **2. Policy** — Xingru Liu
-#### **3. Case study, Approach & Methodology** - Yuqing Liu
+#### **2. Policy & Case study** — Xingru Liu
+#### **3. Approach & Methodology** - Yuqing Liu
 #### **4. Project Plan & Budget** - Xiaoyi Chen
 #### **5. Risks, Limitations & Summary** - Yihan Liu
 #### **6. References**
@@ -305,8 +305,11 @@ class: center, middle
 ## Against this heartbreaking backdrop, 
 ## we decided to delve into the issue ......
 ---
+class: inverse, center, middle
 
-### UN Sustainable Development Goals
+# 2. Policy & Case study
+---
+## 2.1 UN Sustainable Development Goals
 
 <div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: left;">
   <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
@@ -347,7 +350,7 @@ class: center, middle
 
 ---
 
-## Beijing Urban Resilience Strategy—Building spongy, resilient cities
+## 2.2 Beijing Urban Resilience Strategy—Building spongy, resilient cities
 
 - **Upgrading urban emergency disaster prevention technology**
 
@@ -360,12 +363,12 @@ Enhancing emergency rescue and material protection capacity, upgrading emergency
 
 <small>Source: Proposals for China's Vision for 2035 (2023)<small>
 ---
-class: inverse, middle, center
+class: middle, center
 
 # It was not clear what information was used to guide responses.
 ---
 
-## Follow Sendai Framework for Disaster Risk Reduction 2015-2030
+## 2.3 Follow Sendai Framework for Disaster Risk Reduction 2015-2030
 
 **Address the recommendations of Priority**
 
@@ -385,7 +388,7 @@ class: inverse, middle, center
 
 
 ---
-# 3.1 Case Study
+## 2.4 Case Study
 ### London, UK
 <div class="justify-text">
 
@@ -411,14 +414,14 @@ class: inverse, center, middle
 # 3. Approach & Methodology
 ---
 
-# 3.2 Approach
+## 3.1 Approach
 
 ```{r echo=FALSE, out.width='200%', fig.align='center'}
 knitr::include_graphics("img/approach.png")
 ```
 
 ---
-# 3.2 Approach
+## 3.1 Approach
 
 ```{r echo=FALSE, out.width='140%', fig.align='center'}
 knitr::include_graphics("img/approach1.png")
@@ -426,7 +429,7 @@ knitr::include_graphics("img/approach1.png")
 
 ---
 
-# 3.3 Methodology
+## 3.2 Methodology
 
 ```{r echo=FALSE, out.width='140%', fig.align='center'}
 knitr::include_graphics("img/approach2.png")
@@ -434,7 +437,7 @@ knitr::include_graphics("img/approach2.png")
 
 ---
 
-# 3.3 Methodology
+## 3.2 Methodology
 
 'Hyperparameter optimization' Machine Learning approach
 
@@ -456,7 +459,7 @@ Based off approaches developed by [(Chen, Huang and Chen, 2021)](https://www.sci
 
 `r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
 
-???
+
 Presenter Notes
 
 Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
@@ -465,9 +468,9 @@ Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany e
 
 ---
 
-
 class: inverse, center, middle
-### Example output:Density  map
+
+## 3.3 Expected output: Density map
 
 ```{r riskmap_img, echo=FALSE, out.width='70%', fig.align='center'}
 knitr::include_graphics('img/example.png')
@@ -476,15 +479,16 @@ knitr::include_graphics('img/example.png')
 
 
 ---
-# 3.4 Data
-## EO data
+## 3.4 Data
+
+### EO data
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data1.png")
 ```
 
 ---
 class: middle, center
-## Socio-economic data
+### Socio-economic data
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data2.png")
@@ -585,9 +589,11 @@ The allocation of £500,000 funds based on project timeline.
 
 Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 30% = £150,000 available for personnel salaries. 
 
-
 ---
+class: inverse, center, middle
 
+# 5. Risks, Limitations & Summary
+---
 # Risks and Limitations
 
 .pull-left[
@@ -629,16 +635,38 @@ Benefits of the project:
 
 ---
 
-# References
+# References(1)
 
-- Ding, X., Liao, W., Lei, X., Wang, H., Yang, J., & Wang, H. (2022). Assessment of the impact of climate change on urban flooding: A case study of Beijing, China. Journal of Water and Climate Change, 13(10), 2692–3715. https://doi.org/10.2166/wcc.2022.224
-
-- Wang, Z., Li, Z., Wang, Y., Zheng, X., & Deng, X. (2024). Building green infrastructure for mitigating urban flood risk in Beijing, China. Urban Forestry & Urban Greening, 93, 128218-. https://doi.org/10.1016/j.ufug.2024.128218
+- Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
 
 - Chen, J., Huang, G. and Chen, W. (2021). ‘Towards better flood risk management: Assessing flood risk and investigating the potential mechanism based on machine learning models’. Journal of Environmental Management, 293, p. 112810. doi: 10.1016/j.jenvman.2021.112810.
 
+- Ding, X., Liao, W., Lei, X., Wang, H., Yang, J., & Wang, H. (2022). Assessment of the impact of climate change on urban flooding: A case study of Beijing, China. Journal of Water and Climate Change, 13(10), 2692–3715. https://doi.org/10.2166/wcc.2022.224
+
+- Global Assessment Report on Disaster Risk Reduction (2019) Available at: https://gar.undrr.org/chapters/chapter-11-national-and-local-disaster-risk-reduction-strategies-and-plans.html#11.3 (Accessed: 12 March 2024).
+
+---
+
+# References(2)
+
+- Proposals for China's Vision for 2035 (2023) Available at: https://www.mem.gov.cn/xw/ztzl/2020/xxgcwzqh/qwjd/zjjd/202012/t20201208_374880.shtml
+(Accessed: 10 March 2024).
+
 - Tayyab, M., Zhang, J., Hussain, M., Ullah, S., Liu, X., Khan, S. N., Baig, M. A., Hassan, W. and Al-Shaibah, B. (2021). ‘GIS-Based Urban Flood Resilience Assessment Using Urban Flood Resilience Model: A Case Study of Peshawar City, Khyber Pakhtunkhwa, Pakistan’. Remote Sensing. Multidisciplinary Digital Publishing Institute, 13 (10), p. 1864. doi: 10.3390/rs13101864.
+
+- Wang, Z., Li, Z., Wang, Y., Zheng, X., & Deng, X. (2024). Building green infrastructure for mitigating urban flood risk in Beijing, China. Urban Forestry & Urban Greening, 93, 128218-. https://doi.org/10.1016/j.ufug.2024.128218
+
+---
+
+# References(3)
 
 - Yifei Wang, Lu Peng, Liang Emlyn Yang, Zehao Wang, Xiang zheng Deng,Attributing effects of classified infrastructure management on mitigating urban flood risks: A case study in Beijing, China,Sustainable Cities and Society,Volume 101,2024,105141,ISSN 2210-6707, https://doi.org/10.1016/j.scs.2023.105141.
 
-- Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
+- Zhu, H., Yao, J., Meng, J., Cui, C., Wang, M., & Yang, R. (2023). A Method to Construct an Environmental Vulnerability Model Based on Multi-Source Data to Evaluate the Hazard of Short-Term Precipitation-Induced Flooding. Remote Sensing, 15(6), 1609.
+https://doi.org/10.3390/rs15061609
+
+---
+class: inverse, center, middle
+
+# Thanks for listening!
+
