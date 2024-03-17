@@ -534,9 +534,20 @@ knitr::include_graphics("img/timetable.jpg")
 ```
 
 </br>
-<small>.center[Roles: A - Architects; E/S - Experts/Scholars; EC - Environment Consultant;  GA - Geospatial Analysts;CR - Community Residents; DA - Data Analysts; E - Engineers; GD - Government Departments; PM - Project Managers]
+<small>Roles:
+.pull-left[
+A - Architects; </br>
+DA - Data Analysts;</br>
+E/S - Experts/Scholars; </br>
+E - Engineers;</br> 
+GA - Geospatial Analysts;</br>
+]
+.pull-right[
+CR - Community Residents;</br>
+EC - Environment Consultant;</br>
+GD - Government Departments;</br>
+PM - Project Managers]
 <small>
-
 
 ---
 ## 4.2 Budget
@@ -627,5 +638,6 @@ Benefits of the project:
 - Chen, J., Huang, G. and Chen, W. (2021). ‘Towards better flood risk management: Assessing flood risk and investigating the potential mechanism based on machine learning models’. Journal of Environmental Management, 293, p. 112810. doi: 10.1016/j.jenvman.2021.112810.
 
 - Tayyab, M., Zhang, J., Hussain, M., Ullah, S., Liu, X., Khan, S. N., Baig, M. A., Hassan, W. and Al-Shaibah, B. (2021). ‘GIS-Based Urban Flood Resilience Assessment Using Urban Flood Resilience Model: A Case Study of Peshawar City, Khyber Pakhtunkhwa, Pakistan’. Remote Sensing. Multidisciplinary Digital Publishing Institute, 13 (10), p. 1864. doi: 10.3390/rs13101864.
- 
+
+- Yifei Wang, Lu Peng, Liang Emlyn Yang, Zehao Wang, Xiang zheng Deng,Attributing effects of classified infrastructure management on mitigating urban flood risks: A case study in Beijing, China,Sustainable Cities and Society,Volume 101,2024,105141,ISSN 2210-6707, https://doi.org/10.1016/j.scs.2023.105141.
 
