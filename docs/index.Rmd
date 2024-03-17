@@ -308,35 +308,35 @@ class: center, middle
 
 ### UN Sustainable Development Goals
 
-<div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: center;">
+<div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: left;">
   <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
     <img src="./img/E_WEB_06.png" style="width: 100%; max-height: 200px;" alt=" "/>
-    <figcaption style="font-size: 18px;">
-      <strong>Wastewater treatment, water efficiency enhancement and securing fresh water supply</strong>
-      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
-        <li style="font-size: 18px;">% domestic and industrial wastewater flows safely treated</li>
-        <li style="font-size: 18px;">% water bodies with good environmental quality</li>
-        <li style="font-size: 18px;">% freshwater withdrawals to available freshwater resources</li>
+    <figcaption style="font-size: 18px; text-align: left;">
+      <strong>Wastewater treatment to improve utilization and ensure freshwater supply</strong>
+      <ul style="list-style-type: disc; padding-left: 0; margin: 10px 0; text-align: left;">
+        <li style="font-size: 18px;">Domestic and industrial wastewater flows safely treated</li>
+        <li style="font-size: 18px;">Water bodies with good environmental quality</li>
+        <li style="font-size: 18px;">Freshwater withdrawals to available freshwater resources</li>
       </ul>
     </figcaption>
   </figure>
-  
+
   <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
     <img src="./img/E_WEB_11.png" style="width: 100%; max-height: 200px;" alt=" "/>
-    <figcaption style="font-size: 18px;">
+    <figcaption style="font-size: 18px; text-align: left;">
       <strong>Sustainable urbanization, disaster reduction</strong>
-      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
-        <li style="font-size: 18px;">% civil society participation in urban planning and management</li>
+      <ul style="list-style-type: disc; padding-left: 0; margin: 10px 0; text-align: left;">
+        <li style="font-size: 18px;">Civil society participation in urban planning and management</li>
         <li style="font-size: 18px;">Population, economic and infrastructure losses associated with disasters</li>
       </ul>
     </figcaption>
   </figure>
-  
+
   <figure style="margin: 0 5px; flex-basis: calc(33.3% - 10px);">
     <img src="./img/E_WEB_13.png" style="width: 100%; max-height: 200px;" alt=" "/>
-    <figcaption style="font-size: 18px;">
+    <figcaption style="font-size: 18px; text-align: left;">
       <strong>Climate disaster resilience and planning</strong>
-      <ul style="list-style-type: disc; padding-left: 20px; margin: 10px 0;">
+      <ul style="list-style-type: disc; padding-left: 0; margin: 10px 0; text-align: left;">
         <li style="font-size: 18px;">Sendai Framework for Disaster Risk Reduction</li>
         <li style="font-size: 18px;">Development of local strategies based on national strategies</li>
         <li style="font-size: 18px;">Reporting to the United Nations Framework Convention on Climate Change on information, plans and contributions</li>
@@ -385,8 +385,7 @@ class: inverse, middle, center
 
 
 ---
-
-# Case Study
+# 3.1 Case Study
 ### London, UK
 <div class="justify-text">
 
@@ -407,15 +406,19 @@ Image credit: [GOV.UK](https://www.gov.uk/government/news/environment-agency-wor
 ]
 
 ---
+class: inverse, center, middle
 
-# Approach
+# 3. Approach & Methodology
+---
+
+# 3.2 Approach
 
 ```{r echo=FALSE, out.width='200%', fig.align='center'}
 knitr::include_graphics("img/approach.png")
 ```
 
 ---
-# Approach
+# 3.2 Approach
 
 ```{r echo=FALSE, out.width='140%', fig.align='center'}
 knitr::include_graphics("img/approach1.png")
@@ -423,7 +426,7 @@ knitr::include_graphics("img/approach1.png")
 
 ---
 
-# Methodology
+# 3.3 Methodology
 
 ```{r echo=FALSE, out.width='140%', fig.align='center'}
 knitr::include_graphics("img/approach2.png")
@@ -431,7 +434,7 @@ knitr::include_graphics("img/approach2.png")
 
 ---
 
-# Methodology
+# 3.3 Methodology
 
 'Hyperparameter optimization' Machine Learning approach
 
@@ -448,7 +451,7 @@ knitr::include_graphics("img/approach2.png")
 5. **Validate** the model using testing set of data
 
 
-Based off approaches developed by [链接文本](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[链接文本](https://www.mdpi.com/2072-4292/13/10/1864)
+Based off approaches developed by [(Chen, Huang and Chen, 2021)](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[(Tayyab et al., 2021)](https://www.mdpi.com/2072-4292/13/10/1864)
 
 
 `r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
@@ -462,6 +465,7 @@ Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany e
 
 ---
 
+
 class: inverse, center, middle
 ### Example output:Density  map
 
@@ -470,6 +474,21 @@ knitr::include_graphics('img/example.png')
 ```
 
 
+
+---
+# 3.4 Data
+## EO data
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("table/data1.png")
+```
+
+---
+class: middle, center
+## Socio-economic data
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("table/data2.png")
+```
 
 ---
 
@@ -519,4 +538,9 @@ Benefits of the project:
 - Ding, X., Liao, W., Lei, X., Wang, H., Yang, J., & Wang, H. (2022). Assessment of the impact of climate change on urban flooding: A case study of Beijing, China. Journal of Water and Climate Change, 13(10), 2692–3715. https://doi.org/10.2166/wcc.2022.224
 
 - Wang, Z., Li, Z., Wang, Y., Zheng, X., & Deng, X. (2024). Building green infrastructure for mitigating urban flood risk in Beijing, China. Urban Forestry & Urban Greening, 93, 128218-. https://doi.org/10.1016/j.ufug.2024.128218
+
+- Chen, J., Huang, G. and Chen, W. (2021). ‘Towards better flood risk management: Assessing flood risk and investigating the potential mechanism based on machine learning models’. Journal of Environmental Management, 293, p. 112810. doi: 10.1016/j.jenvman.2021.112810.
+
+- Tayyab, M., Zhang, J., Hussain, M., Ullah, S., Liu, X., Khan, S. N., Baig, M. A., Hassan, W. and Al-Shaibah, B. (2021). ‘GIS-Based Urban Flood Resilience Assessment Using Urban Flood Resilience Model: A Case Study of Peshawar City, Khyber Pakhtunkhwa, Pakistan’. Remote Sensing. Multidisciplinary Digital Publishing Institute, 13 (10), p. 1864. doi: 10.3390/rs13101864.
+ 
 
