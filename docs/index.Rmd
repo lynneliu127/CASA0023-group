@@ -502,14 +502,27 @@ class: inverse, center, middle
 </br>
 The project involves enhancing urban resilience in Beijing, specifically focusing on flood risk assessment and early warning systems:
 
-
+</br>
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("img/time_period.png")
 ```
 
 
+
+---
+## 4.1 Project Timetable Plan
+
 </br>
-Based on the data from the 2023 Beijing-Tianjin-Hebei floods, Beijing experienced a severe rainstorm disaster from late July to early August. Therefore, our project will be completed by July 1st this year, allowing ample time for flood prevention measures
+The project involves enhancing urban resilience in Beijing, specifically focusing on flood risk assessment and early warning systems:
+
+</br>
+</br>
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("img/time_period2.jpg")
+```
+</br>
+</br>
+Based on the data from the 2023 Beijing-Tianjin-Hebei floods, Beijing experienced a severe rainstorm disaster from late July to early August. Therefore, our project will be completed by July 1st this year, allowing ample time for flood prevention measures.
 
 ---
 ## 4.1 Project Timetable Plan
@@ -520,12 +533,45 @@ Based on the data from the 2023 Beijing-Tianjin-Hebei floods, Beijing experience
 knitr::include_graphics("img/timetable.jpg")
 ```
 
-<small>.center[Roles: A - Architects; E/S - Experts/Scholars; EC - Environment Consultant; GA - Geospatial Analysts;CR - Community Residents; DA - Data Analysts; E - Engineers; GD - Government Departments; PM - Project Managers]
+<small>.center[Roles: A - Architects; E/S - Experts/Scholars; EC - Environment Consultant;  GA - Geospatial Analysts;CR - Community Residents; DA - Data Analysts; E - Engineers; GD - Government Departments; PM - Project Managers]
 <small>
 
 
 ---
 ## 4.2 Budget
+
+The allocation of £500,000 funds based on project timeline:
+
+
+| Activities                                                 | Budget Allocation | Percentage |
+|------------------------------------------------------------|-------------------|------------|
+| **Initial Preparation**</br>Data collection and analysis</br>Development of building resilience testing system                                    | £50,000           | 10%        |
+| **Development of Flood Risk Assessment Model**</br>Model construction and parameter fitting</br>Identification of risk-driving factors and impact analysis| £200,000  | 40%        |
+| **Enhancing Urban Resilience**</br>Optimization of green infrastructure layout</br>Development of systems and knowledge outcomes                             | £200,000          | 40%        |
+| **Early Warning and Preparedness**</br>Warning system development</br>Coordination of emergency measures            | £50,000   | 10%        |
+
+
+
+
+---
+## 4.2 Budget
+
+Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 30% = £150,000 available for personnel salaries. 
+
+
+| Roles | Total Salary | Quantity | Estimate work day | Day rate |
+|----------|---------|------|-------|------------|
+| A - Architects | £24,000 | 2 | 90 | £133 |
+| E/S - Experts/Scholars | £54,000 | 100 | 180 | £100 |
+| EC - Environment Consultant | £18,000 | 100 | 90 | £200 |
+| GA - Geospatial Analysts | £6,000 | 1 | 75 | £80 |
+| CR - Community Residents | £6,000 | 1 | 45 | £133 |
+| DA - Data Analysts | £12,000 | 2 | 30 | £200 |
+| E - Engineers | £12,000 | 2 | 75 | £80 |
+| GD - Government Departments | £6,000 | 1 | 20 | £300 |
+| PM - Project Managers | £12,000 | 1 | 30 | £400 |
+
+
 
 
 ---
