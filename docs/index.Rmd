@@ -533,6 +533,7 @@ Based on the data from the 2023 Beijing-Tianjin-Hebei floods, Beijing experience
 knitr::include_graphics("img/timetable.jpg")
 ```
 
+</br>
 <small>.center[Roles: A - Architects; E/S - Experts/Scholars; EC - Environment Consultant;  GA - Geospatial Analysts;CR - Community Residents; DA - Data Analysts; E - Engineers; GD - Government Departments; PM - Project Managers]
 <small>
 
