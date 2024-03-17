@@ -560,15 +560,16 @@ The allocation of £500,000 funds based on project timeline.
 
 | Roles | Total Salary | Quantity | Estimate work day | Day rate |
 |----------|---------|------|-------|------------|
-| A - Architects | £24,000 | 2 | 90 | £133 |
-| E/S - Experts/Scholars | £54,000 | 100 | 180 | £100 |
-| EC - Environment Consultant | £18,000 | 100 | 90 | £200 |
-| GA - Geospatial Analysts | £6,000 | 1 | 75 | £80 |
-| CR - Community Residents | £6,000 | 1 | 45 | £133 |
-| DA - Data Analysts | £12,000 | 2 | 30 | £200 |
-| E - Engineers | £12,000 | 2 | 75 | £80 |
-| GD - Government Departments | £6,000 | 1 | 20 | £300 |
-| PM - Project Managers | £12,000 | 1 | 30 | £400 |
+| A - Architects | £7,500 | 5 | 90 | £133 |
+| E/S - Experts/Scholars | £15,000 | 10 | 180 | £100 |
+| EC - Environment Consultant | £7,500 | 5 | 90 | £200 |
+| GA - Geospatial Analysts | £7,500 | 15 | 75 | £80 |
+| CR - Community Residents | £7,500 | 16 | 45 | £133 |
+| DA - Data Analysts | £15,000 | 10 | 30 | £200 |
+| E - Engineers | £15,000 | 20 | 75 | £80 |
+| GD - Government Departments | £7,500 | 16 | 20 | £300 |
+| PM - Project Managers | £7,500 | 5 | 30 | £400 |
+
 
 
 Assuming a salary allocation of 30% of the total funding, we have: £500,000 × 30% = £150,000 available for personnel salaries. 
