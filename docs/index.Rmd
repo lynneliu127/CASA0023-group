@@ -96,7 +96,7 @@ background-position: center
 ### 3. Problem: Context & Background
 ### 4. Problem: Context & Background
 ### 5. Problem: Context & Background
-### 6. Problem: Context & Background
+### 6. References
 
 ---
 class: inverse, center, middle
@@ -106,7 +106,7 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-### Beijing was hit by the heaviest rainfall in 140 years. 
+## Beijing was hit by the heaviest rainfall in 140 years. 
 between 29 July and 1 August 2023
 
 .pull-left[
@@ -147,7 +147,7 @@ class: center, middle
 - More than **2,000 meters' altitude difference** makes it **a natural rainwater harvesting area**.
 
 .pull-middle[
-```{r echo=FALSE, out.width='35%', fig.align='center'}
+```{r echo=FALSE, out.width='43%', fig.align='center'}
 knitr::include_graphics("img/Beijing111.jpg")
 ```
 ]
@@ -156,9 +156,8 @@ source: Wang et al. ,2024
 ---
 class: center, middle
 
-### However, 
-### one of the biggest predictors of flood susceptibility 
-### is 
+### However, one of the biggest predictors of 
+### flood susceptibility is 
 ### the degree of urbanisation.
 ---
 # 1.3 Urbanisation
@@ -192,7 +191,7 @@ source:[Reuters](https://www.reuters.com/graphics/CHINA-WEATHER/RAINFALL/zdvxrrg
 ---
 # 1.3 Urbanisation
 
-- Urban areas are more prone to flooding than rural areas. **Buildings can worsen the situation**. 
+-  **Buildings can worsen the situation**. 
 
 - The trapped water has less surface area to accumulate, leading to higher water levels.
 
