@@ -641,3 +641,4 @@ Benefits of the project:
 
 - Yifei Wang, Lu Peng, Liang Emlyn Yang, Zehao Wang, Xiang zheng Deng,Attributing effects of classified infrastructure management on mitigating urban flood risks: A case study in Beijing, China,Sustainable Cities and Society,Volume 101,2024,105141,ISSN 2210-6707, https://doi.org/10.1016/j.scs.2023.105141.
 
+- Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
