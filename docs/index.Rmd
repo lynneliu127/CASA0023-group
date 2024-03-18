@@ -136,9 +136,9 @@ class: center, middle
 # 1.1 Climate
 -  Northern China's climate include **Beijing is dry** for most of the year.
 
--  In summer, **typhoons move north from south**, the rapid and heavy **rainfall soaks the dry land**.
+-  **In summer**, typhoons move north from south, the rapid and **heavy rainfall soaks the dry land**.
 
--  However, extended periods of **drought can reduce soil's water absorption**.
+-  **However, extended periods of drought can reduce soil's water absorption**.
 
 .pull-middle[
 ```{r echo=FALSE, out.width='50%', fig.align='center'}
@@ -172,7 +172,7 @@ class: center, middle
 
 - **Urban areas are more prone to flooding than rural areas**.
 
-- Man-made surfaces in urban areas are often impervious or waterproof.
+- **Man-made surfaces** in urban areas are often **impervious or waterproof**.
 
 - **Natural drainage systems** such as open spaces, greenery and streams **help to absorb and disperse rainfall**.
 
@@ -358,10 +358,14 @@ Research on climate change and underground structures, risk assessment, and opti
 - **Improvement of emergency rescue capability**
 
 Enhancing emergency rescue and material protection capacity, upgrading emergency medical treatment capacity, and strengthening transportation and communication protection capacity, etc.
-- **Programs for cross-sectoral coordination and collaboration in disaster and disease management and development of contingency plans**
+- **Programs for cross-sectoral coordination and collaboration of  plans**
 
 
-<small>Source: Proposals for China's Vision for 2035 (2023)<small>
+<br/>
+<br/>
+<br/>
+<br/>
+Source: Proposals for China's Vision for 2035 (2023)
 ---
 class: middle, center
 
@@ -381,10 +385,12 @@ class: middle, center
 - **Investing in Disaster Risk Reduction for resilience<br>**
   Rational allocation of resources
 
-- **Enhancing disaster preparedness for effective response and to "Build Back Better" in recovery, rehabilitation and reconstruction**
+- **Enhancing disaster preparedness for effective response and to "Build Back Better"**
 
+<br/>
+<br/>
 
-<small>Source: United Nations Office for Disaster Risk Reduction (2019)<small>
+Source: United Nations Office for Disaster Risk Reduction (2019)
 
 
 ---
@@ -460,7 +466,7 @@ Based off approaches developed by [(Chen, Huang and Chen, 2021)](https://www.sci
 
 ---
 
-class: inverse, center, middle
+class: inverse
 
 ## 3.3 Expected output: Density map
 
@@ -468,18 +474,22 @@ class: inverse, center, middle
 knitr::include_graphics('img/example.png')
 ```
 
-source:[(Chen, Huang and Chen, 2021)](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)
+<br/>
+<br/>
+<br/>
+source:[(Chen et al., 2021)](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)
 ---
 ## 3.4 Data
 
-### EO data
+### (1) EO data
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data1.png")
 ```
 
 ---
-class: middle, center
-### Socio-economic data
+## 3.4 Data
+
+### (2) Socio-economic data
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data2.png")
@@ -627,7 +637,7 @@ Benefits of the project:
 ---
 
 # References(1)
-
+<small>
 - Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
 
 - Chen, J., Huang, G. and Chen, W. (2021). ‘Towards better flood risk management: Assessing flood risk and investigating the potential mechanism based on machine learning models’. Journal of Environmental Management, 293, p. 112810. doi: 10.1016/j.jenvman.2021.112810.
@@ -636,19 +646,16 @@ Benefits of the project:
 
 - Global Assessment Report on Disaster Risk Reduction (2019) Available at: https://gar.undrr.org/chapters/chapter-11-national-and-local-disaster-risk-reduction-strategies-and-plans.html#11.3 (Accessed: 12 March 2024).
 
----
-
-# References(2)
 - Hemmati, M., Ellingwood, B. R. and Mahmoud, H. N. (2020). ‘The Role of Urban Growth in Resilience of Communities Under Flood Risk’. Earth’s Future, 8 (3), p. e2019EF001382. doi: 10.1029/2019EF001382.
 
 - Proposals for China's Vision for 2035 (2023) Available at: https://www.mem.gov.cn/xw/ztzl/2020/xxgcwzqh/qwjd/zjjd/202012/t20201208_374880.shtml
 (Accessed: 10 March 2024).
-
-- Tayyab, M., Zhang, J., Hussain, M., Ullah, S., Liu, X., Khan, S. N., Baig, M. A., Hassan, W. and Al-Shaibah, B. (2021). ‘GIS-Based Urban Flood Resilience Assessment Using Urban Flood Resilience Model: A Case Study of Peshawar City, Khyber Pakhtunkhwa, Pakistan’. Remote Sensing. Multidisciplinary Digital Publishing Institute, 13 (10), p. 1864. doi: 10.3390/rs13101864.
-
 ---
 
-# References(3)
+# References(2)
+<small>
+
+- Tayyab, M., Zhang, J., Hussain, M., Ullah, S., Liu, X., Khan, S. N., Baig, M. A., Hassan, W. and Al-Shaibah, B. (2021). ‘GIS-Based Urban Flood Resilience Assessment Using Urban Flood Resilience Model: A Case Study of Peshawar City, Khyber Pakhtunkhwa, Pakistan’. Remote Sensing. Multidisciplinary Digital Publishing Institute, 13 (10), p. 1864. doi: 10.3390/rs13101864.
 
 - Wang, Z., Li, Z., Wang, Y., Zheng, X., & Deng, X. (2024). Building green infrastructure for mitigating urban flood risk in Beijing, China. Urban Forestry & Urban Greening, 93, 128218-. https://doi.org/10.1016/j.ufug.2024.128218
 
