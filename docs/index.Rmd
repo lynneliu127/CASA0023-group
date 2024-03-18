@@ -136,9 +136,9 @@ class: center, middle
 # 1.1 Climate
 -  Northern China's climate include **Beijing is dry** for most of the year.
 
--  In summer, **typhoons move north from south**, the rapid and heavy **rainfall soaks the dry land**.
+-  **In summer**, typhoons move north from south, the rapid and **heavy rainfall soaks the dry land**.
 
--  However, extended periods of **drought can reduce soil's water absorption**.
+-  **However, extended periods of drought can reduce soil's water absorption**.
 
 .pull-middle[
 ```{r echo=FALSE, out.width='50%', fig.align='center'}
@@ -172,7 +172,7 @@ class: center, middle
 
 - **Urban areas are more prone to flooding than rural areas**.
 
-- Man-made surfaces in urban areas are often impervious or waterproof.
+- Man-made surfaces in urban areas are often **impervious or waterproof**.
 
 - **Natural drainage systems** such as open spaces, greenery and streams **help to absorb and disperse rainfall**.
 
@@ -201,7 +201,7 @@ source:[Reuters](https://www.reuters.com/graphics/CHINA-WEATHER/RAINFALL/zdvxrrg
 
 -  **Buildings can worsen the situation**. 
 
-- The trapped water has less surface area to accumulate, leading to higher water levels.
+- The trapped water has **less surface area to accumulate, leading to higher water levels**.
 
 - **Rich landform  may** cause rainfall from higher area flow into lower area, **increasing the volume of water**, limiting where floodwater can disperse.
 
@@ -279,7 +279,7 @@ source: [Scmp](https://www.scmp.com/economy/china-economy/article/3143212/china-
 
 .panel[.panel-name[economic]
 
-- Despite the severity of 2023's floods, Beijing experiencing disastrous flooding is nothing new.
+- Despite the severity of 2023's floods, Beijing experiencing disastrous flood is nothing new.
 
 - Beijing’s 2012 rainstorm caused **US$1.86 billion** economic losses (Ding et al., 2022).
 
@@ -302,7 +302,7 @@ source: [Reuters](https://www.reuters.com/world/china/china-floods-hit-rice-corn
 ---
 class: center, middle
 
-## Against this heartbreaking backdrop, 
+## Against this heartbreaking background, 
 ## we decided to delve into the issue ......
 ---
 class: inverse, center, middle
@@ -358,7 +358,7 @@ Research on climate change and underground structures, risk assessment, and opti
 - **Improvement of emergency rescue capability**
 
 Enhancing emergency rescue and material protection capacity, upgrading emergency medical treatment capacity, and strengthening transportation and communication protection capacity, etc.
-- **Programs for cross-sectoral coordination and collaboration in disaster and disease management and development of contingency plans**
+- **Programs for cross-sectoral coordination and collaboration of  plans**
 
 
 <small>Source: Proposals for China's Vision for 2035 (2023)<small>
@@ -381,7 +381,7 @@ class: middle, center
 - **Investing in Disaster Risk Reduction for resilience<br>**
   Rational allocation of resources
 
-- **Enhancing disaster preparedness for effective response and to "Build Back Better" in recovery, rehabilitation and reconstruction**
+- **Enhancing disaster preparedness for effective response and to "Build Back Better"**
 
 
 <small>Source: United Nations Office for Disaster Risk Reduction (2019)<small>
@@ -453,42 +453,35 @@ knitr::include_graphics("img/approach2.png")
 
 5. **Validate** the model using testing set of data
 
+</br>
+</br>
+</br>
 
-Based off approaches developed by [(Chen, Huang and Chen, 2021)](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[(Tayyab et al., 2021)](https://www.mdpi.com/2072-4292/13/10/1864)
-
-
-`r Citet(myBib, "taubenbockFloodRisksUrbanized2011", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "mojaddadiEnsembleMachinelearningbasedGeospatial2017", .opts = list(max.names=1, longnamesfirst = FALSE))`, `r Citet(myBib, "tehranyFloodSusceptibilityMapping2014", .opts = list(max.names=1, longnamesfirst = FALSE))`.
-
-
-Presenter Notes
-
-Refs for this section: Taubenböck et al 2011; Mojadaddi et al. 2017; Tehrany et al. 2014; Flood database: Tellman et al. 2021
-
-
+Source: [(Chen et al., 2021)](https://www.sciencedirect.com/science/article/pii/S0301479721008720#bib26)[(Tayyab et al., 2021)](https://www.mdpi.com/2072-4292/13/10/1864)
 
 ---
 
-class: inverse, center, middle
+class: inverse
 
 ## 3.3 Expected output: Density map
 
+</div>
 ```{r riskmap_img, echo=FALSE, out.width='70%', fig.align='center'}
 knitr::include_graphics('img/example.png')
 ```
 
-
-
 ---
 ## 3.4 Data
 
-### EO data
+### (1) EO data
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data1.png")
 ```
 
 ---
-class: middle, center
-### Socio-economic data
+## 3.4 Data
+
+### (2) Socio-economic data
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("table/data2.png")
@@ -510,8 +503,6 @@ The project involves enhancing urban resilience in Beijing, specifically focusin
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("img/time_period.png")
 ```
-
-
 
 ---
 ## 4.1 Project Timetable Plan
@@ -572,7 +563,6 @@ The allocation of £500,000 funds based on project timeline.
 ## 4.2 Budget
 
 
-
 | Roles | Total Salary | Quantity | Estimate work day | Day rate |
 |----------|---------|------|-------|------------|
 | A - Architects | £7,500 | 5 | 90 | £133 |
@@ -594,9 +584,10 @@ class: inverse, center, middle
 
 # 5. Risks, Limitations & Summary
 ---
-# Risks and Limitations
+## 5.1 Risks and Limitations
 
 .pull-left[
+
 **Risks**
 
 -  Additional high expenses
@@ -620,11 +611,12 @@ class: inverse, center, middle
 ---
 
 
-# Summary
+## 5.2 Summary
 
 This project extracts and evaluates key information on the flooding situation in Beijing by integrating multi-source remote sensing data.
 
-Benefits of the project:
+**Benefits of the project:**
+
 - Provide accurate disaster information and technical support. 
 
 - Provide a scientific basis for emergency response following floods.
@@ -633,11 +625,16 @@ Benefits of the project:
 
 - Promote sustainable urban development.
 
+
 ---
+class: inverse, center, middle
 
-# References(1)
+# 6. References
+---
+## 6.1 References
 
-- Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
+- Beijing Municipal Emergency Committee.(2022).Notice of the Beijing Municipal Emergency Committee on Printing and Distributing the Beijing Flood Control Emergency Plan (Revised in 2022).
+https://www.beijing.gov.cn/zhengce/zhengcefagui/202308/t20230807_3216832.html
 
 - Chen, J., Huang, G. and Chen, W. (2021). ‘Towards better flood risk management: Assessing flood risk and investigating the potential mechanism based on machine learning models’. Journal of Environmental Management, 293, p. 112810. doi: 10.1016/j.jenvman.2021.112810.
 
@@ -647,7 +644,7 @@ Benefits of the project:
 
 ---
 
-# References(2)
+## 6.2 References
 
 - Proposals for China's Vision for 2035 (2023) Available at: https://www.mem.gov.cn/xw/ztzl/2020/xxgcwzqh/qwjd/zjjd/202012/t20201208_374880.shtml
 (Accessed: 10 March 2024).
@@ -658,7 +655,7 @@ Benefits of the project:
 
 ---
 
-# References(3)
+## 6.3 References
 
 - Yifei Wang, Lu Peng, Liang Emlyn Yang, Zehao Wang, Xiang zheng Deng,Attributing effects of classified infrastructure management on mitigating urban flood risks: A case study in Beijing, China,Sustainable Cities and Society,Volume 101,2024,105141,ISSN 2210-6707, https://doi.org/10.1016/j.scs.2023.105141.
 
